@@ -2,7 +2,6 @@ class NoteModel {
   String id;
   String title;
   String description;
-  // bool isDone;
 
   NoteModel({this.id = '', required this.title, required this.description});
 
