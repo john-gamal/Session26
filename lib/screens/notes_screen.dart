@@ -154,7 +154,6 @@ class NotesScreen extends StatelessWidget {
                   id: note?.id ?? '',
                   title: titleController.text.trim(),
                   description: descriptionController.text.trim(),
-                  isDone: note?.isDone ?? false,
                 );
 
                 if (note == null) {

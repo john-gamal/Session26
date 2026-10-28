@@ -2,17 +2,12 @@ class NoteModel {
   String id;
   String title;
   String description;
-  bool isDone;
+  // bool isDone;
 
-  NoteModel({
-    this.id = '',
-    required this.title,
-    required this.description,
-    this.isDone = false,
-  });
+  NoteModel({this.id = '', required this.title, required this.description});
 
   Map<String, dynamic> toMap() {
-    return {'title': title, 'description': description, 'isDone': isDone};
+    return {'title': title, 'description': description};
   }
 
   factory NoteModel.fromMap(Map<String, dynamic> map, String id) {
@@ -20,7 +15,6 @@ class NoteModel {
       id: id,
       title: map['title'] ?? '',
       description: map['description'] ?? '',
-      isDone: map['isDone'] ?? false,
     );
   }
 }
